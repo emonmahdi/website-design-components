@@ -1,0 +1,199 @@
+
+ 
+
+/* Main header styling */
+header .navaigation-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 120px;
+  /* box-shadow: 0 0 10px #333; */
+}
+
+/* Logo styles */
+ 
+.logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 50px;
+}
+
+/* Desktop navigation menu */
+/* Sticky menu styles */
+.navaigation-menu {
+  background-color: white; /* Optional: Add background */
+  transition: all 0.5s ease; /* Smooth transition for when it becomes sticky */
+}
+
+/* Style when the menu is sticky */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for effect */
+}
+
+/* Optional: Add some padding to the top of the body when sticky menu is active */
+body.sticky-nav {
+  padding-top: 60px; /* Adjust this based on your navigation height */
+}
+
+/* Desktop navigation menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  padding-top: 17px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links li a {
+  color: #000;
+  text-decoration: none;
+  padding: 10px 8px;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  /* background-color: #28a9e0; */
+  border-radius: 5px;
+  color: #28a9e0;
+}
+
+.nav-links .btn-appointment, .mobile-nav-links .btn-appointment{
+  padding: 10px 20px;
+    background-color: #2EA6F7;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* Infinite Highlighting Animation */
+@keyframes highlightAnimation {
+  0% { 
+      transform: scale(1);
+  }
+  50% { 
+      transform: scale(1.05);
+  }
+  100% { 
+      transform: scale(1);
+  }
+}
+
+/* Apply animation to the button */
+.btn-appointment {
+  animation: highlightAnimation 2s infinite ease-in-out;
+}
+
+/* Optional: Hover effect to enhance button interaction */
+.btn-appointment:hover {
+  background-color: #002261;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Hamburger (three dots) icon styles */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hide menu off-screen */
+  width: 250px;
+  height: auto;
+  background-color: #333;
+  transition: left 0.3s ease; /* Smooth slide-in effect */
+  z-index: 1000;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  padding: 50px 0 0 20px; /* Space for close button */
+}
+
+.mobile-nav-links li {
+  margin: 5px 0;
+}
+
+.mobile-nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 5px 0;
+  display: block;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.mobile-nav-links li a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+/* Close Button in Mobile Menu */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .logo img {
+    max-height: 45px;  /* Adjust logo size for medium screens */
+  }
+  header .navaigation-menu { 
+    padding: 15px 50px;
+    /* box-shadow: 0 0 10px #333; */
+}
+  /* Display hamburger icon on smaller screens */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide the desktop nav links on mobile */
+  .nav-links {
+    display: none;
+  }
+}
+/* Make logo smaller on very small devices (optional) */
+@media (max-width: 576px) {
+  .logo img {
+    max-height: 40px;  /* Decrease the logo size on very small screens */
+  }
+  header .navaigation-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 20px;
+    /* box-shadow: 0 0 10px #333; */
+}
+} 
+
+/* Large devices (e.g., desktops) */
+@media (min-width: 1024px) {
+  .logo img {
+    max-height: 50px;  /* Keep original logo size for large screens */
+  }
+}
+ 
