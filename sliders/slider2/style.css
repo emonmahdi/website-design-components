@@ -1,0 +1,122 @@
+
+.my-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background:  var(--main-primary-color);
+    border: none;
+    color: var(--light-text--color);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .my-btn:hover {
+    background: var(--secondary-color);
+    color: var(--light-text--color);
+  }
+   
+
+
+/* ===================================================
+   Hero Area Start
+=================================================== */
+.hero-section {
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 20px; /* Ensures padding for smaller screens */
+    text-align: center;
+  }
+  .highlight-text {
+    color:  var(--hero-mark-text-color);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://tinyurl.com/3e63jxua");
+    background-size: cover;
+    background-position: center;
+    transform-origin: center;
+    animation: backgroundInfiniteScale 15s linear infinite;
+    z-index: 0;
+  }
+  
+  /* Overlay Effect */
+  .background-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* Continuous, Smooth Scale-Down Loop */
+  @keyframes backgroundInfiniteScale {
+    0% {
+      transform: scale(1.8);
+      opacity: 1;
+    }
+    90% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.8);
+      opacity: 1;
+    }
+  }
+  
+  .hero-content {
+    position: absolute;
+    text-align: center;
+    color: var(--light-text--color);
+    width: 80%;
+    max-width: 1200px; /* Prevents stretching on large screens */
+    margin: 0 auto;
+    z-index: 1;
+  }
+  
+  .hero-content h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+  
+  .hero-content .my-btn .fa-angles-right, 
+  .about-content .my-btn .fa-angles-right,
+  .blog-content .my-btn .fa-book-open-reader{ 
+    transition: 0.3s;
+  }
+  .hero-content .my-btn:hover .fa-angles-right, 
+  .about-content .my-btn:hover .fa-angles-right,
+  .blog-content .my-btn:hover .fa-book-open-reader
+  {
+    margin-left: 15px;
+    transition: 0.4s;
+  }
+  
+  /* Responsive Paragraph */
+  .hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding: 0 10%; /* Adjust padding for better readability */
+    animation: fadeInUp 2.0s ease-in-out;
+  }
+  
+  /* ===================================================
+     Hero Area End
+  =================================================== */
